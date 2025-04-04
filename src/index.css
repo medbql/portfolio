@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+
+  --color-primary: #2d3e50;
+  --color-primary-light: #34495e;
+  --color-primary-dark: #243342;
+
+  --color-secondary: #1abc9c;
+  --color-secondary-light: #2ecc71;
+  --color-secondary-dark: #16a085;
+
+  --color-accent: #3498db;
+  --color-accent-light: #41a9ed;
+  --color-accent-dark: #2980b9;
+
+  --color-background: #f5f7fa;
+  --color-background-dark: #eaeff5;
+  --color-background-darker: #dfe6f0;
+
+  --color-text: #333333;
+  --color-text-light: #555555;
+  --color-text-lighter: #777777;
+
+  @keyframes out {
+    0% {
+      transform: translateX(-100%);
+
+    }
+
+    100% {
+      transform: translateX(0);
+
+    }
+  }
+
+  @keyframes down {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+
+    }
+  }
+  @keyframes little {
+    0% {
+      transform: translateY(-30%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+
+    }
+  }
+
+  --animate--out: out 2s ease;
+  --animate--down: down 2s ease;
+  --animate--down-lt: little 2s ease;
+
+
+}
+
+
+body {
+  font-family: "Oswald", sans-serif;
+  height: 100vh;
+  background-color: #f5f7fa;
+  box-shadow: 2px 5px 45px 30px #dfe6f0 inset;
+}
