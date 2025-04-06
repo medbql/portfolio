@@ -84,7 +84,7 @@ function Cards(idx, limit, animate,keyAnim) {
         <>
             {athor.map((item, i) => {
                 return (
-                    <div key={`${keyAnim}-${i}`} className={`bg-text-light ${animate == 'left'?"animate-(--animate--left)":"animate-(--animate--right)"} relative transition-all duration-1000 flex  justify-center items-start  rounded-xl shadow-lg shadow-text w-[20%] h-full`} >
+                    <div key={`${keyAnim}-${i}`} className={`bg-background ${animate == 'left'?"animate-(--animate--left)":"animate-(--animate--right)"} relative transition-all duration-1000 flex  justify-center items-start  rounded-xl shadow-md shadow-text-lighter/50  w-[20%] h-full`} >
 
                         {item.name == 'laravel' ? <img src={`${item.img} `} className="pt-15" /> :
                             <i className={`${item.class} ${item.color} pt-15 text-8xl `} ></i>
