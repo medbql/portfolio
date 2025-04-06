@@ -2,7 +2,7 @@
 function NavBar() {
     return (
         <>
-            <nav className="w-full  h-[10vh] pt-8 content-center " >
+            <nav className="w-full  h-[10vh] pt-15 content-center " >
                 <div className="m-auto w-1/3 flex gap-15 animate-(--animate--down) relative " >
                     <div className="w-1/3  flex justify-center items-center gap-2 " >
                         <div className="w-[8px] h-[8px] bg-primary rounded-[50%] shadow-lg shadow-primary " ></div>

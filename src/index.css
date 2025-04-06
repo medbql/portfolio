@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css');
 @import "tailwindcss";
 
 @theme {
@@ -59,18 +62,43 @@
 
     }
   }
+  @keyframes left {
+    0% {
+      left : -10%;
+     
+    }
+
+    100% {
+      left : 0;
+    
+
+    }
+  }
+  @keyframes right {
+    0% {
+      right : -10%;
+     
+    }
+
+    100% {
+      right : 0;
+    
+
+    }
+  }
+  
 
   --animate--out: out 2s ease;
   --animate--down: down 2s ease;
   --animate--down-lt: little 2s ease;
-
+  --animate--left: left 1s ease forwards;
+  --animate--right: right 1s ease forwards;
 
 }
 
 
 body {
   font-family: "Oswald", sans-serif;
-  height: 100vh;
   background-color: #f5f7fa;
   box-shadow: 2px 5px 45px 30px #dfe6f0 inset;
 }
