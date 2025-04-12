@@ -2,9 +2,9 @@
 function About() {
     return (
         <>
-            <div className=" w-full flex justify-between  mb-50   mt-25  h-[60vh] py-15 px-30 " >
+            <div id="about" className=" w-full flex justify-between  mb-50   mt-25  h-[60vh] py-15 px-30 " >
                 <div className="animate-(--animate--out) w-full mr-3  relative  ">
-                    <h1 className="text-8xl text-text-light mb-5 underline font-medium " >Mohamed Bouquil</h1>
+                    <h1 className="text-8xl text-text mb-5 underline font-medium " >Mohamed Bouquil</h1>
                     <p className="pt-4 pr-4 mb-10 text-xl text-text-light font-medium" >
                         "Hi, a Full Stack Developer skilled in both frontend and backend technologies. I build fast, scalable, and user-friendly web applications using modern frameworks and clean code. Passionate about problem-solving and innovation, I turn ideas into functional digital solutions. Check out my work below!"
                     </p>

@@ -12,9 +12,9 @@ function NavBar() {
                         <div className="w-[8px] h-[8px] bg-primary rounded-[50%] shadow-lg shadow-primary " ></div>
                     </div>
                     <ul className="w-3/4 bg-primary-light text-text-lighter font-bold   p-3 shadow-md shadow-primary-light  rounded-full flex justify-center items-center gap-10">
-                        <li><a href="" className="underline" >About</a></li>
-                        <li><a href="" className="underline">Project</a></li>
-                        <li><a href="" className="underline">Contact</a></li>
+                        <li><a href="#about" className="underline transition hover:text-primary-dark" >About</a></li>
+                        <li><a href="#project" className="underline transition hover:text-primary-dark" >Project</a></li>
+                        <li><a href="#contact" className="underline transition hover:text-primary-dark" >Contact</a></li>
                     </ul>
                 </div>
 

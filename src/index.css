@@ -2,39 +2,42 @@
 @import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css');
 @import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css');
 @import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
 @import "tailwindcss";
 
 @theme {
+  /* Clean Primary Colors */
+  --color-primary: #3b82f6;      /* Blue-500 */
+  --color-primary-light: #60a5fa; /* Blue-400 */
+  --color-primary-dark: #2563eb;  /* Blue-600 */
 
-  --color-primary: #2d3e50;
-  --color-primary-light: #34495e;
-  --color-primary-dark: #243342;
+  /* Subtle Secondary Colors */
+  --color-secondary: #22c55e;    /* Green-500 */
+  --color-secondary-light: #4ade80; /* Green-400 */
+  --color-secondary-dark: #16a34a;  /* Green-600 */
 
-  --color-secondary: #1abc9c;
-  --color-secondary-light: #2ecc71;
-  --color-secondary-dark: #16a085;
+  /* Warm Accent Colors */
+  --color-accent: #f97316;       /* Orange-500 */
+  --color-accent-light: #fb923c;  /* Orange-400 */
+  --color-accent-dark: #ea580c;   /* Orange-600 */
 
-  --color-accent: #3498db;
-  --color-accent-light: #41a9ed;
-  --color-accent-dark: #2980b9;
+  /* Neutral Background Colors */
+  --color-background: #ffffff;    /* White */
+  --color-background-dark: #f3f4f6; /* Gray-100 */
+  --color-background-darker: #e5e7eb; /* Gray-200 */
 
-  --color-background: #f5f7fa;
-  --color-background-dark: #eaeff5;
-  --color-background-darker: #dfe6f0;
+  /* Improved Text Colors */
+  --color-text: #1a1a1a;         /* Almost black for main text */
+  --color-text-light: #4a4a4a;   /* Dark gray for secondary text */
+  --color-text-lighter: #666666; /* Medium gray for less important text */
 
-  --color-text: #333333;
-  --color-text-light: #555555;
-  --color-text-lighter: #777777;
-
+  /* Animation Keyframes */
   @keyframes out {
     0% {
       transform: translateX(-100%);
-
     }
-
     100% {
       transform: translateX(0);
-
     }
   }
 
@@ -43,62 +46,56 @@
       transform: translateY(-100%);
       opacity: 0;
     }
-
     100% {
       transform: translateY(0);
       opacity: 1;
-
     }
   }
+
   @keyframes little {
     0% {
       transform: translateY(-30%);
       opacity: 0;
     }
-
     100% {
       transform: translateY(0);
       opacity: 1;
-
     }
   }
+
   @keyframes left {
     0% {
-      left : -10%;
-     
+      left: -5%;
     }
-
     100% {
-      left : 0;
-    
-
+      left: 0;
     }
   }
+
   @keyframes right {
     0% {
-      right : -10%;
-     
+      right: -5%;
     }
-
     100% {
-      right : 0;
-    
-
+      right: 0;
     }
   }
-  
 
   --animate--out: out 2s ease;
   --animate--down: down 2s ease;
   --animate--down-lt: little 2s ease;
   --animate--left: left 1s ease forwards;
   --animate--right: right 1s ease forwards;
-
 }
 
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Oswald", sans-serif;
-  background-color: #f5f7fa;
-  box-shadow: 2px 5px 45px 30px #dfe6f0 inset;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  box-shadow: 2px 5px 45px 30px var(--color-background-darker) inset;
 }
+
