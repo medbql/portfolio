@@ -1,3 +1,4 @@
+import  emailjs  from "@emailjs/browser";
 import { useState } from "react";
 
 function Contact() {
@@ -6,6 +7,9 @@ function Contact() {
         email: '',
         message: ''
     });
+    const [isSent, setIsSent] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(null);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -17,8 +21,32 @@ function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Here you can add your form submission logic
-        console.log(formData);
+        setIsLoading(true);
+        setError(null);
+        setIsSent(null);
+        
+        // Get the form element
+        const form = e.target;
+        
+        emailjs.sendForm(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            form,
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
+            .then((response) => {
+                if (response.status === 200) {
+                    setIsSent(true);
+                    setFormData({ name: '', email: '', message: '' });
+                }
+            })
+            .catch((error) => {
+                console.error('Email sent error!', error);
+                setError('Failed to send message. Please try again.');
+            })
+            .finally(() => {
+                setIsLoading(false);
+            });
     };
 
     return (
@@ -71,11 +99,35 @@ function Contact() {
                                     autoComplete="off"
                                 ></textarea>
                             </div>
+
+                            {/* Status Messages */}
+                            {isSent && (
+                                <div className="animate-fade-in bg-green-500/10 border border-green-500/20 text-green-500 px-4 py-3 rounded-lg">
+                                    Message sent successfully! 
+                                </div>
+                            )}
+                            {error && (
+                                <div className="animate-fade-in bg-red-500/10 border border-red-500/20 text-red-500 px-4 py-3 rounded-lg">
+                                    {error}
+                                </div>
+                            )}
+
                             <button
+                                disabled={isLoading}
                                 type="submit"
-                                className="w-full bg-primary cursor-pointer transition active:scale-97 text-white py-3 px-6 rounded-lg hover:bg-primary-dark transition-colors duration-900"
+                                className={`w-full flex items-center justify-center gap-2 bg-primary cursor-pointer transition active:scale-97 text-white py-3 px-6 rounded-lg hover:bg-primary-dark transition-colors duration-900 ${isLoading ? 'opacity-75' : ''}`}
                             >
-                                Send Message
+                                {isLoading ? (
+                                    <>
+                                        <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                        </svg>
+                                        Sending...
+                                    </>
+                                ) : (
+                                    'Send Message'
+                                )}
                             </button>
                         </form>
                     </div>
@@ -99,17 +151,11 @@ function Contact() {
                                 </div>
                             </div>
                         </div>
-
-                        
                     </div>
                 </div>
             </div>
         </section>
         </>
-       
-
-        
-        
     );
 }
 
