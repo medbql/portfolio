@@ -7,29 +7,29 @@
 
 @theme {
   /* Clean Primary Colors */
-  --color-primary: #3b82f6;      /* Blue-500 */
-  --color-primary-light: #60a5fa; /* Blue-400 */
-  --color-primary-dark: #2563eb;  /* Blue-600 */
+  --color-primary: #a1a1aa;      /* zinc-500 */
+  --color-primary-light: #71717a; /* zinc-400 */
+  --color-primary-dark: #52525b;  /* zinc-600 */
 
   /* Subtle Secondary Colors */
-  --color-secondary: #22c55e;    /* Green-500 */
-  --color-secondary-light: #4ade80; /* Green-400 */
-  --color-secondary-dark: #16a34a;  /* Green-600 */
+  --color-secondary: #39365d;    /*  */
+  --color-secondary-light: #dddbff; /*  */
+  --color-secondary-dark: #020024;  /*  */
 
   /* Warm Accent Colors */
-  --color-accent: #f97316;       /* Orange-500 */
-  --color-accent-light: #fb923c;  /* Orange-400 */
-  --color-accent-dark: #ea580c;   /* Orange-600 */
+  --color-accent: #0600c2;       /*  */
+  --color-accent-light: #443dff;  /*  */
+  --color-accent-dark: #04006d;   /*  */
 
   /* Neutral Background Colors */
-  --color-background: #ffffff;    /* White */
-  --color-background-dark: #f3f4f6; /* Gray-100 */
-  --color-background-darker: #e5e7eb; /* Gray-200 */
+  --color-background: #48484a;    /*  */
+  --color-background-dark: #33333a; /*  */
+  --color-background-darker: #010104; /*  */
 
   /* Improved Text Colors */
-  --color-text: #1a1a1a;         /* Almost black for main text */
-  --color-text-light: #4a4a4a;   /* Dark gray for secondary text */
-  --color-text-lighter: #666666; /* Medium gray for less important text */
+  --color-text: #040316;         /*  */
+  --color-text-light: #2f2d5f;   /*  */
+  --color-text-lighter: #f1f1fe; /*  */
 
   /* Animation Keyframes */
   @keyframes out {
@@ -94,8 +94,8 @@
 
 body {
   font-family: "Oswald", sans-serif;
-  background-color: var(--color-background);
+  background-image: linear-gradient(to bottom right, white, #b4b4b6);
   color: var(--color-text);
-  box-shadow: 2px 5px 45px 30px var(--color-background-darker) inset;
+  
 }
 

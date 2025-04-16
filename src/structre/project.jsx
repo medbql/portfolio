@@ -81,7 +81,7 @@ function Cards(idx, limit, animate, keyAnim) {
         <>
             {athor.map((item, i) => {
                 return (
-                    <div key={`${keyAnim}-${i}`} className={`bg-background ${animate == 'left' ? "animate-(--animate--left)" : "animate-(--animate--right)"} relative transition-all duration-1000 flex  justify-center items-start  rounded-xl shadow-md shadow-text-lighter/50  w-[20%] h-full`} >
+                    <div key={`${keyAnim}-${i}`} className={`bg-text-lighter ${animate == 'left' ? "animate-(--animate--left)" : "animate-(--animate--right)"} relative transition-all duration-1000 flex  justify-center items-start  rounded-xl shadow-md shadow-background/50  w-[20%] h-full`} >
                         {item.name == 'laravel' ? <img src={`${item.img} `} className="pt-15" /> :
                             <i className={`${item.class} ${item.color} pt-15 text-8xl `} ></i>
                         }
@@ -112,8 +112,8 @@ function Project() {
                     <div className=" pt-4 pl-2 relative">
                         <h4 className="font-bold text-xl mb-2 text-primary" >featured project</h4>
                         <h2 className="text-6xl font-semibold mb-5 text-primary-dark" >SPIA CLOUD</h2>
-                        <div className="w-full h-3/6 ml-8 p-5 bg-linear-to-bl from-violet-500 to-fuchsia-500 opacity-90 rounded-xl shadow-lg relative z-20" >
-                            <p className=" w-full h-full text-white font-meduim  " >the Spia cloud is a platform for manange roles and save data in tables specificing the types of data , with a system of communication between users like . </p>
+                        <div className="w-full h-3/6 ml-8 p-5 bg-radial-[at_25%_25%] from-white to-zinc-700 to-90% rounded-xl shadow-lg relative z-20" >
+                            <p className=" w-full h-full text-text font-meduim  " >the Spia cloud is a platform for manange roles and save data in tables specificing the types of data , with a system of communication between users like . </p>
                         </div>
                         <div className="p-8 ">
                             <button className=" text-2xl cursor-pointer text-primary-dark transition active:scale-90 hover:scale-110 " >
@@ -124,7 +124,7 @@ function Project() {
                                             
                         </div>
                     </div>
-                    <div className=" bg-linear-to-bl from-violet-500 to-fuchsia-500 pl-5 pt-5 rounded-xl shadow-lg -z-10">
+                    <div className="bg-radial-[at_25%_25%] from-white to-zinc-500 to-75% pl-5 pt-5 rounded-xl shadow-lg -z-10">
                         <div className="bg-white grid grid-cols-3 gap-x-3 gap-y-10 p-5 w-full h-full rounded-t-xl rounded-b-xl rounded-r-none   ">
                             <div className="rounded-xl shadow-lg">
                             <img src="public/Capture d'écran 2025-04-12 141711.png" alt="" className="h-full"  />
@@ -149,7 +149,7 @@ function Project() {
                     </div>
                 </div>
                
-                <div className="w-7/8 mx-auto mb-30  bg-text-light h-2" ></div>
+                <div className="w-7/8 mx-auto mb-30  bg-secondary-dark h-2" ></div>
                  {/*technologies part  */}
                  <div className="flex justify-between items-center mb-20 ">
                     <button onClick={() => {
@@ -163,8 +163,8 @@ function Project() {
                         }
                         setDirection('right')
 
-                    }} className="outline outline-2 outline-text-light py-4 px-5 rounded-full transition active:scale-90 content-center shadow-lg cursor-pointer">
-                        <i className="fi fi-br-arrow-left text-text-light text-xl"></i>
+                    }} className="outline outline-2 outline-accent py-4 px-5 rounded-full transition active:scale-90 content-center shadow-lg cursor-pointer">
+                        <i className="fi fi-br-arrow-left text-accent text-xl"></i>
                     </button>
                     <div className="w-[65%] h-[35vh] flex justify-around ">
                         {Cards(count, limit, direction, animationKey)}
@@ -180,8 +180,8 @@ function Project() {
                         }
                         setDirection('left')
 
-                    }} className="outline outline-2 outline-text-light py-4 px-5 rounded-full transition active:scale-90 content-center shadow-md cursor-pointer">
-                        <i className="fi fi-br-arrow-right text-text-light text-xl"></i>
+                    }} className="outline outline-2 outline-accent py-4 px-5 rounded-full transition active:scale-90 content-center shadow-md cursor-pointer">
+                        <i className="fi fi-br-arrow-right text-accent text-xl"></i>
                     </button>
 
                 </div>

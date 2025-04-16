@@ -57,8 +57,8 @@ function Contact() {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
                     {/* Contact Form */}
-                    <div className="bg-white/5 backdrop-blur-sm p-10 rounded-xl shadow-lg">
-                        <h3 className="text-3xl text-primary mb-8">Send me a message</h3>
+                    <div className="bg-primary-light/50 p-10 rounded-xl shadow-lg">
+                        <h3 className="text-3xl text-primary-dark mb-8">Send me a message</h3>
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
                                 <label htmlFor="name" className="block text-text-light mb-2">Name</label>
@@ -68,7 +68,7 @@ function Contact() {
                                     name="name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 bg-white/10 border border-text-light/20 rounded-lg focus:outline-none focus:border-primary text-text-light"
+                                    className="w-full px-4 py-3 bg-text-lighter border border-text-light/20 rounded-lg focus:outline-none focus:border-primary text-text-light"
                                     required
                                     autoComplete="off"
                                 />
@@ -81,7 +81,7 @@ function Contact() {
                                     name="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 bg-white/10 border border-text-light/20 rounded-lg focus:outline-none focus:border-primary text-text-light"
+                                    className="w-full px-4 py-3 bg-text-lighter border border-text-light/20 rounded-lg focus:outline-none focus:border-primary text-text-light"
                                     required
                                     autoComplete="off"
                                 />
@@ -94,7 +94,7 @@ function Contact() {
                                     value={formData.message}
                                     onChange={handleChange}
                                     rows="6"
-                                    className="w-full px-4 py-3 bg-white/10 border border-text-light/20 rounded-lg focus:outline-none focus:border-primary text-text-light"
+                                    className="w-full px-4 py-3 bg-text-lighter border border-text-light/20 rounded-lg focus:outline-none focus:border-primary text-text-light"
                                     required
                                     autoComplete="off"
                                 ></textarea>
@@ -115,7 +115,7 @@ function Contact() {
                             <button
                                 disabled={isLoading}
                                 type="submit"
-                                className={`w-full flex items-center justify-center gap-2 bg-primary cursor-pointer transition active:scale-97 text-white py-3 px-6 rounded-lg hover:bg-primary-dark transition-colors duration-900 ${isLoading ? 'opacity-75' : ''}`}
+                                className={`w-full bg-secondary flex items-center justify-center gap-2 bg-primary cursor-pointer transition active:scale-97 text-white py-3 px-6 rounded-lg hover:bg-secondary-dark transition-colors duration-900 ${isLoading ? 'opacity-75' : ''}`}
                             >
                                 {isLoading ? (
                                     <>
@@ -135,7 +135,7 @@ function Contact() {
                     {/* Contact Information */}
                     <div className="space-y-10">
                         <div>
-                            <h3 className="text-3xl text-primary mb-8">Contact Information</h3>
+                            <h3 className="text-3xl text-primary-dark mb-8">Contact Information</h3>
                             <div className="space-y-6">
                                 <div className="flex items-center space-x-4">
                                     <i className="fi fi-rr-envelope text-2xl text-primary"></i>

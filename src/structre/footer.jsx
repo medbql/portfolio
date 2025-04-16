@@ -1,54 +1,16 @@
 import { useState } from 'react';
 
 function Footer() {
-    const [currentYear, ] = useState(new Date().getFullYear());
+    const [currentYear, setCurrentYear ] = useState(new Date().getFullYear());
 
     return (
-        <footer className="w-full h-[15vh] bg-primary-light pt-4 pb-0">
-            <div className="max-w-7xl mx-auto px-4">
-                <div className="grid grid-cols-1 md:grid-cols-2  items-center">
+        <footer className="w-full h-[10vh] flex items-center justify-center mx-auto p-2 px-4">                
                     {/* Copyright Section */}
-                    <div className="text-center md:text-left">
-                        <p className="text-text-light text-sm">
-                            © {currentYear} All Rights Reserved
+                    <div className=" bg-primary-light w-1/3 p-2 rounded-full shadow-lg shadow-primary-dark/50 ">
+                        <p className="text-text-lighter text-center text-md">
+                            © {currentYear} All Rights Reserved, Designed & Built by Mohamed Bouquil
                         </p>
-                        <p className="text-text-lighter text-xs mt-1">
-                            Designed & Built with ❤️ by Mohamed Bouquil
-                        </p>
-                    </div>
 
-
-                  
-
-                    {/* Quick Links */}
-                    <div className="flex justify-center md:justify-end space-x-4">
-                        <a 
-                            href="#about" 
-                            className="text-text-light hover:text-primary transition-colors duration-300 text-sm"
-                        >
-                            Home
-                        </a>
-                        <a 
-                            href="#project" 
-                            className="text-text-light hover:text-primary transition-colors duration-300 text-sm"
-                        >
-                            Projects
-                        </a>
-                        <a 
-                            href="#contact" 
-                            className="text-text-light hover:text-primary transition-colors duration-300 text-sm"
-                        >
-                            Contact
-                        </a>
-                    </div>
-                </div>
-
-                {/* Bottom Border */}
-                <div className="mt-3 pt-3 border-t border-text-light/20">
-                    <p className="text-center text-text-lighter text-xs">
-                        Made with React.js and Tailwind CSS
-                    </p>
-                </div>
             </div>
         </footer>
     );
