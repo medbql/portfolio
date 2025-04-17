@@ -2,12 +2,15 @@
 function NavBar() {
     return (
         <>
-            <nav className="w-full  h-[10vh] pt-15 content-center " >
+            <nav className="w-full  h-[10vh] pt-15 content-center sticky top-0 z-55 " >
                 <div className="m-auto w-1/3 flex gap-15 animate-(--animate--down) relative " >
                     <div className="w-1/3  flex justify-center items-center gap-2 " >
                         <div className="w-[8px] h-[8px] bg-primary rounded-[50%] shadow-lg shadow-primary " ></div>
-                        <div className=" w-[50px] inset-shadow-sm inset-shadow-primary-light  border-2 border-primary-light rounded-[50%] p-[2px] shadow-md ">
-                            <img className=" rounded-[50%] brightness-50" src="../public/profile.jpg" alt="" />
+                        <div className=" w-[50px] inset-shadow-sm inset-shadow-primary-light cursor-pointer hover:scale-105 transition-all duration-300  border-2 border-primary-light rounded-[50%] p-[2px] shadow-md ">
+                           <a href="#about">
+                           <img className=" rounded-[50%] brightness-50" src="../public/profile.jpg" alt="" />
+                           </a>
+                           
                         </div>
                         <div className="w-[8px] h-[8px] bg-primary rounded-[50%] shadow-lg shadow-primary " ></div>
                     </div>

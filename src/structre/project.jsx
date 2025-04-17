@@ -112,7 +112,7 @@ function Project() {
                     <div className=" pt-4 pl-2 relative">
                         <h4 className="font-bold text-xl mb-2 text-primary" >featured project</h4>
                         <h2 className="text-6xl font-semibold mb-5 text-primary-dark" >SPIA CLOUD</h2>
-                        <div className="w-full h-3/6 ml-8 p-5 bg-radial-[at_25%_25%] from-white to-zinc-700 to-90% rounded-xl shadow-lg relative z-20" >
+                        <div className="w-full h-3/6 ml-8 p-5 bg-radial-[at_25%_25%] from-white to-zinc-500 to-90% rounded-xl shadow-lg relative z-20" >
                             <p className=" w-full h-full text-text font-meduim  " >the Spia cloud is a platform for manange roles and save data in tables specificing the types of data , with a system of communication between users like . </p>
                         </div>
                         <div className="p-8 ">
