@@ -105,18 +105,18 @@ function Project() {
 
     return (
         <>
-            <main id="project" className="w-full  h-[150vh]  py-15 px-30">
-                <h2 className="text-7xl text-text underline mb-20 ">Projects & Technologies:</h2>
+            <main id="project" className="w-full  h-[150vh]  py-15 px-15">
+                <h2 className="text-5xl text-text underline mb-20 ">Projects & Technologies:</h2>
                  {/* Project part  */}
-                 <div className="w-full h-[50vh] mb-30 grid grid-cols-2  " >
+                 <div className="w-full h-[50vh] px-10 mb-30 grid grid-cols-2  " >
                     <div className=" pt-4 pl-2 relative">
-                        <h4 className="font-bold text-xl mb-2 text-primary" >featured project</h4>
-                        <h2 className="text-6xl font-semibold mb-5 text-primary-dark" >SPIA CLOUD</h2>
-                        <div className="w-full h-3/6 ml-8 p-5 bg-radial-[at_25%_25%] from-white to-zinc-500 to-90% rounded-xl shadow-lg relative z-20" >
-                            <p className=" w-full h-full text-text font-meduim  " >the Spia cloud is a platform for manange roles and save data in tables specificing the types of data , with a system of communication between users like . </p>
+                        <h4 className="font-bold text-lg mb-2 text-primary" >featured project</h4>
+                        <h2 className="text-4xl font-semibold mb-5 text-primary-dark" >SPIA CLOUD</h2>
+                        <div className="w-full h-3/7 ml-8 p-5 bg-radial-[at_25%_25%] from-white to-zinc-300 to-90% rounded-xl shadow-lg relative z-20" >
+                            <p className=" w-full h-full text-text font-meduim text-xs  " >the Spia cloud is a platform for manange roles and save data in tables specificing the types of data , with a system of communication between users like . </p>
                         </div>
                         <div className="p-8 ">
-                            <button className=" text-2xl cursor-pointer text-primary-dark transition active:scale-90 hover:scale-110 " >
+                            <button className=" text-xl cursor-pointer text-primary-dark transition active:scale-90 hover:scale-110 " >
                             <a href="https://spiacloud.com/" target="_blank"  >
                             <i className="fi fi-rr-arrow-up-right-from-square  "></i>
                             </a>
@@ -124,7 +124,7 @@ function Project() {
                                             
                         </div>
                     </div>
-                    <div className="bg-radial-[at_25%_25%] from-white to-zinc-500 to-75% pl-5 pt-5 rounded-xl shadow-lg -z-10">
+                    <div className="h-3/3 bg-radial-[at_25%_25%] from-white to-zinc-400 to-75% pl-5 pt-5 rounded-xl shadow-lg -z-10">
                         <div className="bg-white grid grid-cols-3 gap-x-3 gap-y-10 p-5 w-full h-full rounded-t-xl rounded-b-xl rounded-r-none   ">
                             <div className="rounded-xl shadow-lg">
                             <img src="public/Capture d'écran 2025-04-12 141711.png" alt="" className="h-full"  />
@@ -151,7 +151,7 @@ function Project() {
                
                 <div className="w-7/8 mx-auto mb-30  bg-secondary-dark h-2" ></div>
                  {/*technologies part  */}
-                 <div className="flex justify-between items-center mb-20 ">
+                 <div className="w-[80%] mx-auto flex justify-between items-center mb-20 ">
                     <button onClick={() => {
                         setAnimationKey(e => e + 1);
                         if (count <= 0) {
@@ -163,7 +163,7 @@ function Project() {
                         }
                         setDirection('right')
 
-                    }} className="outline outline-2 outline-accent py-4 px-5 rounded-full transition active:scale-90 content-center shadow-lg cursor-pointer">
+                    }} className="outline outline-2 outline-accent py-2 px-3 rounded-full transition active:scale-90 content-center shadow-lg cursor-pointer">
                         <i className="fi fi-br-arrow-left text-accent text-xl"></i>
                     </button>
                     <div className="w-[65%] h-[35vh] flex justify-around ">
@@ -180,7 +180,7 @@ function Project() {
                         }
                         setDirection('left')
 
-                    }} className="outline outline-2 outline-accent py-4 px-5 rounded-full transition active:scale-90 content-center shadow-md cursor-pointer">
+                    }} className="outline outline-2 outline-accent py-2 px-3 rounded-full transition active:scale-90 content-center shadow-md cursor-pointer">
                         <i className="fi fi-br-arrow-right text-accent text-xl"></i>
                     </button>
 
