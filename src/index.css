@@ -65,27 +65,32 @@
 
   @keyframes left {
     0% {
-      left: -5%;
+      opacity: 0.5;
+      left: -1%;
     }
     100% {
+      opacity: 1;
       left: 0;
     }
   }
 
   @keyframes right {
     0% {
-      right: -5%;
+      opacity: 0.5;
+      right: -1%;
     }
     100% {
+      opacity: 1;
       right: 0;
     }
   }
 
   --animate--out: out 2s ease;
+  --animate--out-lt: out 1s ease ;
   --animate--down: down 2s ease;
   --animate--down-lt: little 2s ease;
-  --animate--left: left 1s ease forwards;
-  --animate--right: right 1s ease forwards;
+  --animate--left: left 1.5s ease-in-out ;
+  --animate--right: right 1.5s ease-in-out ;
 }
 
 * {
