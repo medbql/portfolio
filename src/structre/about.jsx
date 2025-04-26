@@ -4,7 +4,7 @@ function About() {
         <>
             <div id="about" className=" w-full max-md:w-[95%] max-md:mx-auto flex justify-between max-md:justify-center mt-20  mb-30     h-[60vh] max-md:h-[85vh] py-15 min-md:px-15  " >
                 <div className="animate-(--animate--out) w-full   min-md:mr-3 p-5  relative  ">
-                    <h1 className="text-7xl text-text mb-5 underline font-medium " >Mohamed Bouquil   jbsjdjkqsnd</h1>
+                    <h1 className="text-7xl text-text mb-5 underline font-medium " >Mohamed Bouquil</h1>
                     <p className="pt-4 pr-4 mb-10 text-md text-primary font-medium" >
                         "Hi, a Full Stack Developer skilled in both frontend and backend technologies. I build fast, scalable, and user-friendly web applications using modern frameworks and clean code. Passionate about problem-solving and innovation, I turn ideas into functional digital solutions. Check out my work below!"
                     </p>
