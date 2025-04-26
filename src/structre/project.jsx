@@ -249,22 +249,22 @@ function Project() {
                     <div className="h-3/3 max-md:hidden bg-radial-[at_25%_25%] from-white to-zinc-400 to-75% pl-5 pt-5 rounded-xl shadow-lg -z-10">
                         <div className="bg-white grid grid-cols-3 gap-x-3 gap-y-10 p-5 w-full h-full rounded-t-xl rounded-b-xl rounded-r-none   ">
                             <div className="rounded-xl shadow-lg">
-                            <img src="public/Capture d'écran 2025-04-12 141711.png" alt="" className="h-full"  />
+                            <img src="/Capture d'écran 2025-04-12 141711.png" alt="" className="h-full"  />
                             </div>
                             <div className="rounded-xl shadow-lg">
-                            <img src="public/Capture d'écran 2025-04-12 141839.png" alt=""  className="h-full"  />
+                            <img src="/Capture d'écran 2025-04-12 141839.png" alt=""  className="h-full"  />
                             </div>
                             <div className="rounded-xl shadow-lg">
-                            <img src="public/Capture d'écran 2025-04-12 141916.png" alt="" className="h-full" />
+                            <img src="/Capture d'écran 2025-04-12 141916.png" alt="" className="h-full" />
                             </div>
                             <div className="rounded-xl shadow-lg">
-                            <img src="public/Capture d'écran 2025-04-12 141928.png" alt="" className="h-full" />
+                            <img src="/Capture d'écran 2025-04-12 141928.png" alt="" className="h-full" />
                             </div>
                             <div className="rounded-xl shadow-lg">
-                            <img src="public/Capture d'écran 2025-04-12 141941.png" alt="" className="h-full" />
+                            <img src="/Capture d'écran 2025-04-12 141941.png" alt="" className="h-full" />
                             </div>
                             <div className="rounded-xl shadow-lg">
-                            <img src="public/Capture d'écran 2025-04-12 141957.png" alt="" className="h-full" />
+                            <img src="/Capture d'écran 2025-04-12 141957.png" alt="" className="h-full" />
                             </div>
                               
                         </div>

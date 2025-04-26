@@ -11,7 +11,7 @@ function NavBar() {
                         <div className="w-[7px] h-[7px] bg-primary rounded-[50%] shadow-lg shadow-primary " ></div>
                         <div className=" w-[45px] h-[45px] inset-shadow-sm inset-shadow-primary-light cursor-pointer hover:scale-105 transition-all duration-300  border-2 border-primary-light rounded-[50%] p-[2px] shadow-md ">
                            <a href="#about">
-                           <img className=" rounded-[50%] brightness-50" src="../public/profile.jpg" alt="" />
+                           <img className=" rounded-[50%] brightness-50" src="/profile.jpg" alt="" />
                            </a>
                            
                         </div>
