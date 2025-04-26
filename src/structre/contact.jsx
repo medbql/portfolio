@@ -1,7 +1,9 @@
 import  emailjs  from "@emailjs/browser";
 import { useState, useEffect } from "react";
+import { useInView } from './useInView';
 
 function Contact() {
+    const [ref, isInView] = useInView();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -64,12 +66,11 @@ function Contact() {
     };
 
     return (
-        <>
-         <section id="contact" className="w-full min-h-screen py-20 px-4 md:px-15">
+        <section ref={ref} id="contact" className={`w-full min-h-screen py-20 px-4 md:px-15 ${isInView ? 'animate-(--animate--down-lt)' : ''}`}>
             <div className="max-w-7xl mx-auto">
-                <h2 className="text-4xl md:text-5xl text-text underline mb-10 md:mb-20 text-center md:text-left">Contact Me:</h2>
+                <h2 className={`text-4xl md:text-5xl text-text underline mb-10 md:mb-20 text-center md:text-left ${isInView ? 'animate-(--animate--out)' : ''}`}>Contact Me:</h2>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20">
+                <div className={`grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 ${isInView ? 'animate-(--animate--down-lt)' : ''}`}>
                     {/* Contact Form */}
                     <div className="w-full px-4 md:px-10">
                         <div className="bg-primary-light/50 p-6 md:p-8 rounded-xl shadow-lg">
@@ -191,7 +192,6 @@ function Contact() {
                 </div>
             </div>
         </section>
-        </>
     );
 }
 

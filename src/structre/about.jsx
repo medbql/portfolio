@@ -9,8 +9,8 @@ function About() {
                         "Hi, a Full Stack Developer skilled in both frontend and backend technologies. I build fast, scalable, and user-friendly web applications using modern frameworks and clean code. Passionate about problem-solving and innovation, I turn ideas into functional digital solutions. Check out my work below!"
                     </p>
                     <ul className="flex items-center gap-5 text-primary-light " >
-                        <li className="transition hover:scale-110" ><a className="" href=""><i className="fi fi-brands-github hover:text-text  text-xl"></i></a></li>
-                        <li className="transition hover:scale-110" ><a href=""><i className="fi fi-brands-linkedin hover:text-text text-xl"></i></a></li>
+                        <li className="transition hover:scale-110" ><a className="" href="https://github.com/medbql" target="_blank" ><i className="fi fi-brands-github hover:text-text  text-xl"></i></a></li>
+                        <li className="transition hover:scale-110" ><a href="https://www.linkedin.com/in/med-bouquil-7527aa2a1/" target="_blank" ><i className="fi fi-brands-linkedin hover:text-text text-xl"></i></a></li>
                     </ul>
 
                 </div>

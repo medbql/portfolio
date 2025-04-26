@@ -5,7 +5,7 @@ function NavBar() {
 
     return (
         <>
-            <nav className="w-full  h-[10vh] pt-10 min-w-xs:content-center sticky top-0 z-55 " >
+            <nav className="w-full   h-[10vh] pt-10 min-w-xs:content-center  " >
                 <div className=" min-sm:mx-auto lg:w-lg md:w-md sm:w-sm  flex justify-around items-center min-sm:gap-10  animate-(--animate--down) relative " >
                     <div className="w-1/3 h-[6vh]  flex min-sm:justify-center items-center gap-2 " >
                         <div className="w-[7px] h-[7px] bg-primary rounded-[50%] shadow-lg shadow-primary " ></div>

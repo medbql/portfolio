@@ -85,12 +85,73 @@
     }
   }
 
+  @keyframes slideIn {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInScale {
+    0% {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
   --animate--out: out 2s ease;
   --animate--out-lt: out 1s ease ;
   --animate--down: down 2s ease;
   --animate--down-lt: little 2s ease;
   --animate--left: left 1.5s ease-in-out ;
   --animate--right: right 1.5s ease-in-out ;
+  --animate--slide-in: slideIn 0.8s ease-out forwards;
+  --animate--fade-scale: fadeInScale 0.8s ease-out forwards;
+  --animate--slide-right: slideInRight 0.8s ease-out forwards;
+  --animate--slide-left: slideInLeft 0.8s ease-out forwards;
+  --animate--float: float 3s ease-in-out infinite;
 }
 
 * {
@@ -101,6 +162,10 @@ body {
   font-family: "Oswald", sans-serif;
   background-image: linear-gradient(to bottom right, white, #b4b4b6);
   color: var(--color-text);
-  
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 

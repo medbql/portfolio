@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useInView } from './useInView';
 
 
 
@@ -132,6 +133,7 @@ const Cards = (props) => {
 
 
 function Project() {
+    const [ref, isInView] = useInView();
     const [count, setCount] = useState(0);
     const [limit, setLimit] = useState(4);
     const [direction, setDirection] = useState('right');
@@ -225,17 +227,17 @@ function Project() {
 
     return (
         <>
-            <main id="project" className="w-full  h-[150vh] min-md:pt-20   py-15 px-15 max-md:px-0">
-                <h2 className="text-5xl text-text max-md:px-5 underline mb-20 ">Projects & Technologies:</h2>
+            <main ref={ref} id="project" className={`w-full h-[150vh] min-md:pt-20 py-15 px-15 max-md:px-0 ${isInView ? 'animate-(--animate--fade-scale)' : ''}`}>
+                <h2 className={`text-5xl text-text max-md:px-5 underline mb-20 ${isInView ? 'animate-(--animate--slide-right)' : ''}`}>Projects & Technologies:</h2>
                  {/* Project part  */}
-                 <div className="w-full max-md:w-[95%] max-md:flex:justify-center h-[50vh]  px-10 mb-30 max-md:mb-10 min-md:grid min-md:grid-cols-2  " >
+                 <div className={`w-full max-md:w-[95%] max-md:flex:justify-center h-[50vh]  px-10 mb-30 max-md:mb-10 min-md:grid min-md:grid-cols-2  ${isInView ? 'animate-(--animate--slide-in)' : ''}`} >
                     <div className=" pt-4 pl-2 relative">
-                        <h4 className="font-bold text-lg mb-2 text-primary" >featured project</h4>
-                        <h2 className="text-4xl font-semibold mb-5 text-primary-dark" >SPIA CLOUD</h2>
-                        <div className="w-full h-3/7 ml-8 max-md:ml-3 p-5 bg-radial-[at_25%_25%] from-white to-zinc-300 to-90% rounded-xl shadow-lg relative z-20" >
-                            <p className=" w-full h-full text-text font-meduim text-xs  " >the Spia cloud is a platform for manange roles and save data in tables specificing the types of data , with a system of communication between users like . </p>
+                        <h4 className={`font-bold text-lg mb-2 text-primary ${isInView ? 'animate-(--animate--slide-left)' : ''}`}>featured project</h4>
+                        <h2 className={`text-4xl font-semibold mb-5 text-primary-dark ${isInView ? 'animate-(--animate--slide-right)' : ''}`}>SPIA CLOUD</h2>
+                        <div className={`w-full h-3/7 ml-8 max-md:ml-3 p-5 bg-radial-[at_25%_25%] from-white to-zinc-300 to-90% rounded-xl shadow-lg relative z-20 ${isInView ? 'animate-(--animate--fade-scale)' : ''}`}>
+                            <p className=" w-full h-full text-text font-meduim text-xs  " >Spia Cloud is a financial data platform that provides real-time stock market analytics in an interactive table format, along with user communication tools and a role-based access control (RBAC) system.  </p>
                         </div>
-                        <div className="p-8  max-md:pl-3">
+                        <div className={`p-8  max-md:pl-3 ${isInView ? 'animate-(--animate--float)' : ''}`}>
                             <button className=" text-xl cursor-pointer text-primary-dark transition active:scale-90 hover:scale-110 " >
                             <a href="https://spiacloud.com/" target="_blank"  >
                             <i className="fi fi-rr-arrow-up-right-from-square  "></i>
@@ -269,9 +271,9 @@ function Project() {
                     </div>
                 </div>
                
-                <div className="w-7/8 mx-auto mb-30  bg-secondary-dark h-2" ></div>
+                <div className={`w-7/8 mx-auto mb-30 bg-secondary-dark h-2 ${isInView ? 'animate-(--animate--slide-in)' : ''}`}></div>
                  {/*technologies part  */}
-                 <div className="w-[80%] mx-auto flex justify-between items-center mb-20">
+                 <div className={`w-[80%] mx-auto flex justify-between items-center mb-20 ${isInView ? 'animate-(--animate--fade-scale)' : ''}`}>
                     <button 
                         onClick={() => {
                             setDirection('left');
