@@ -16,7 +16,7 @@ function About() {
                 </div>
                 <div className="w-4 h-full max-md:hidden bg-primary-dark animate-(--animate--down-lt) relative left-5 "></div>
                 <div className=" w-full max-md:hidden animate-(--animate--down-lt) flex  pl-10  ">
-                    <img src="../public/tec.svg" className=" w-full h-full" alt="" />
+                    <img src="public/tec.svg" className=" w-full h-full" alt="" />
                 </div>
             </div>
 
